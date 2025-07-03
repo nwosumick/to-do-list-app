@@ -1,7 +1,7 @@
-import {useState} from 'react';
-import React from 'react';
-import { RiDeleteBin6Line } from 'react-icons/ri';
-import './TodoApp.css';
+import {useState} from 'react'
+import React from 'react'
+import { RiDeleteBin6Line } from 'react-icons/ri'
+import './TodoApp.css'
 
 
 const TodoApp = () => {
@@ -47,9 +47,8 @@ const TodoApp = () => {
             {todos.map((todo) =>(
                  <li key={todo.id} className={todo.completed ? 'completed' : ''}>
                      <span onClick={()=> toggleComplete(todo.id)}>{todo.text}</span>
-                     <button> onClick={()=> deleteTask(todo.id)}<RiDeleteBin6Line/></button>
+                     <button onClick={()=> deleteTask(todo.id)}> <RiDeleteBin6Line/></button>
                  </li> 
-
             ))}
         </ul>
     </div>
